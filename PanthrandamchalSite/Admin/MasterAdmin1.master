@@ -1,0 +1,203 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterAdmin1.master.cs" Inherits="Admin_MasterAdmin1" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+     <title>Panthrandamchal</title>
+<!-- for-mobile-apps -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Luxus Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+		function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- //for-mobile-apps -->
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<link rel="stylesheet" href="css/lightbox.css" type="text/css" media="all" />
+<link href="css/component.css" rel="stylesheet" type="text/css"  />
+<script src="js/modernizr.custom.js"></script>
+<!-- js -->
+<script src="js/jquery-1.11.1.min.js"></script>
+<!-- //js -->
+<link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+	<!-- start-smoth-scrolling -->
+		<script type="text/javascript" src="js/move-top.js"></script>
+		<script type="text/javascript" src="js/easing.js"></script>
+		<script type="text/javascript">
+		    jQuery(document).ready(function ($) {
+		        $(".scroll").click(function (event) {
+		            event.preventDefault();
+		            $('html,body').animate({ scrollTop: $(this.hash).offset().top }, 1000);
+		        });
+		    });
+		</script>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+
+<body class="cbp-spmenu-push">
+       <!--top-header-->
+		<!--bottom-->
+		  <section class="button">
+					<button id="showLeftPush"><img src="images/menu.png" alt=""></button>
+		   </section>
+			<nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1">
+			<h3>Menu</h3>
+						<a href="#index" class="active">HOME</a>
+						<a href="Addroom.aspx">Add Rooms</a>
+						<a href="viewuser.aspx">View user</a>
+                       	<a href="viewbooking.aspx">View Booking</a>
+
+				<ul class="social-icons text-center">
+					<li><a href="#" class="f1"></a></li>
+					<li><a href="#" class="f2"></a></li>
+					<li><a href="#" class="f3"></a></li>
+					<li><a href="#" class="f4"></a></li>
+				</ul>
+		  </nav>
+		  
+		<!-- Classie - class helper functions by @desandro https://github.com/desandro/classie -->
+		<script src="js/classie.js"></script>
+		<script>
+		    var menuLeft = document.getElementById('cbp-spmenu-s1'),
+				showLeftPush = document.getElementById('showLeftPush'),
+				showRightPush = document.getElementById('showRightPush'),
+				body = document.body;
+
+		    showLeftPush.onclick = function () {
+		        classie.toggle(this, 'active');
+		        classie.toggle(body, 'cbp-spmenu-push-toright');
+		        classie.toggle(menuLeft, 'cbp-spmenu-open');
+		        disableOther('showLeftPush');
+		    };
+
+		    function disableOther(button) {
+		        if (button !== 'showLeftPush') {
+		            classie.toggle(showLeftPush, 'disabled');
+		        }
+		        if (button !== 'showRightPush') {
+		            classie.toggle(showRightPush, 'disabled');
+		        }
+		    }
+		</script>
+<!-- banner -->
+<div class="banner">
+	<div class="logo">
+		<h1><a href="index.html">ADMIN</a></h1>
+	</div>
+   
+			<script type="text/javascript">
+			    $('.search').hide();
+			    $('button').click(function () {
+			        $('.search').show();
+			        $('.text').focus();
+			    }
+				);
+			    $('.close-in').click(function () {
+			        $('.search').hide();
+			    });
+			</script>
+	<div class="banner-info">
+		<script src="Guest/js/responsiveslides.min.js"></script>
+			<script>
+			    // You can also use "$(window).load(function() {"
+			    $(function () {
+			        // Slideshow 4
+			        $("#slider3").responsiveSlides({
+			            auto: true,
+			            pager: true,
+			            nav: false,
+			            speed: 500,
+			            namespace: "callbacks",
+			            before: function () {
+			                $('.events').append("<li>before event fired.</li>");
+			            },
+			            after: function () {
+			                $('.events').append("<li>after event fired.</li>");
+			            }
+			        });
+			    });
+			</script>
+		<div id="top" class="callbacks_container">
+				<ul class="rslides" id="slider3">
+					<li>
+						<div class="banner-text">
+							<div>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+						</div>
+					</li>
+					<li>
+						<div class="banner-text">
+							
+						</div>
+					</li>
+					<li>
+						<div class="banner-text">
+                           
+						</div>
+					</li>
+				</ul>
+		</div>
+	</div>
+</div>
+<!-- //banner -->
+<!-- banner-bottom -->
+
+
+
+
+<%--<div id="hello" class="banner-bottom">
+	<div class="container">
+		<div class="btm-header">
+			<h3 class="tittle">ROOMS</h3>
+			
+		</div>
+		<div class="bottom-grids">
+			<div class="col-md-6 bottom-grid">
+		      <br />
+				<div class="btm-left">
+				</div>
+
+	
+				<div class="clearfix"></div>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+
+</div>--%>
+<!-- //banner-bottom -->
+<!-- highest -->
+
+
+<!-- //footer -->
+<!-- Bootstrap core JavaScript-->
+    <!-- Placed at the end of the document so the pages load faster -->
+	<!-- js -->
+		 <script src="js/bootstrap.js"></script>
+	<!-- js -->
+<!-- smooth scrolling -->
+	<script type="text/javascript">
+	    $(document).ready(function () {
+	        /*
+                var defaults = {
+                containerID: 'toTop', // fading element id
+                containerHoverID: 'toTopHover', // fading element hover id
+                scrollSpeed: 1200,
+                easingType: 'linear' 
+                };
+            */
+	        $().UItoTop({ easingType: 'easeOutQuart' });
+	    });
+	</script>
+	<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+<!-- //smooth scrolling -->
+
+
+</body>
+</html>

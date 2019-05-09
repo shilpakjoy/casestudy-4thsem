@@ -1,0 +1,385 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="AdminMaster.master.cs" Inherits="Admin_AdminMaster" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+   <title>Panthrandamchal</title>
+<!-- for-mobile-apps -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Luxus Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+		function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- //for-mobile-apps -->
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<link rel="stylesheet" href="css/lightbox.css" type="text/css" media="all" />
+<link href="css/component.css" rel="stylesheet" type="text/css"  />
+<script src="js/modernizr.custom.js"></script>
+<!-- js -->
+<script src="js/jquery-1.11.1.min.js"></script>
+<!-- //js -->
+<link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+	<!-- start-smoth-scrolling -->
+		<script type="text/javascript" src="js/move-top.js"></script>
+		<script type="text/javascript" src="js/easing.js"></script>
+		<script type="text/javascript">
+		    jQuery(document).ready(function ($) {
+		        $(".scroll").click(function (event) {
+		            event.preventDefault();
+		            $('html,body').animate({ scrollTop: $(this.hash).offset().top }, 1000);
+		        });
+		    });
+		</script>
+	<!-- start-smoth-scrolling -->
+
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+
+
+
+
+<body class="cbp-spmenu-push">
+       <!--top-header-->
+		<!--bottom-->
+		  <section class="button">
+					<button id="showLeftPush"><img src="images/menu.png" alt=""></button>
+		   </section>
+			<nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1">
+			<h3>Menu</h3>
+						<a href="#index" class="active">HOME</a>
+						<a href="#hello">ABOUT</a>
+<%--						<a href="shortcodes.html">SHORT CODES</a>--%>
+						<a href="gallery.aspx">GALLERY</a>
+                        <a href="#next">HOME STAY</a>
+                        <a href="#next1">LOGIN</a>
+                        <a href="#next2">CONTACT</a>
+					    <%--<a href="blog.html">BLOG</a>
+						<a href="contact.html">CONTACT</a>--%>
+				<ul class="social-icons text-center">
+					<li><a href="#" class="f1"></a></li>
+					<li><a href="#" class="f2"></a></li>
+					<li><a href="#" class="f3"></a></li>
+					<li><a href="#" class="f4"></a></li>
+				</ul>
+		  </nav>
+		  
+		<!-- Classie - class helper functions by @desandro https://github.com/desandro/classie -->
+		<script src="js/classie.js"></script>
+		<script>
+		    var menuLeft = document.getElementById('cbp-spmenu-s1'),
+				showLeftPush = document.getElementById('showLeftPush'),
+				showRightPush = document.getElementById('showRightPush'),
+				body = document.body;
+
+		    showLeftPush.onclick = function () {
+		        classie.toggle(this, 'active');
+		        classie.toggle(body, 'cbp-spmenu-push-toright');
+		        classie.toggle(menuLeft, 'cbp-spmenu-open');
+		        disableOther('showLeftPush');
+		    };
+
+		    function disableOther(button) {
+		        if (button !== 'showLeftPush') {
+		            classie.toggle(showLeftPush, 'disabled');
+		        }
+		        if (button !== 'showRightPush') {
+		            classie.toggle(showRightPush, 'disabled');
+		        }
+		    }
+		</script>
+<!-- banner -->
+<div class="banner">
+	<div class="logo">
+		<h1><a href="index.html">WELCOME</a></h1>
+	</div>
+    <%--<div class="search-in">
+			<div class="search" style="display: none;">
+				<form>
+					<input type="text" class="text">
+					<input type="submit" value="SEARCH">
+				</form>
+				<div class="close-in"><img src="images/close.png" alt=""></div>
+			</div>
+			<div class="right"><button> </button></div>
+	</div>--%>
+			<script type="text/javascript">
+			    $('.search').hide();
+			    $('button').click(function () {
+			        $('.search').show();
+			        $('.text').focus();
+			    }
+				);
+			    $('.close-in').click(function () {
+			        $('.search').hide();
+			    });
+			</script>
+	<div class="banner-info">
+<%--		<script src="js/responsiveslides.min.js"></script>--%>
+			<script>
+			    // You can also use "$(window).load(function() {"
+			    $(function () {
+			        // Slideshow 4
+			        $("#slider3").responsiveSlides({
+			            auto: true,
+			            pager: true,
+			            nav: false,
+			            speed: 500,
+			            namespace: "callbacks",
+			            before: function () {
+			                $('.events').append("<li>before event fired.</li>");
+			            },
+			            after: function () {
+			                $('.events').append("<li>after event fired.</li>");
+			            }
+			        });
+			    });
+			</script>
+		<div id="top" class="callbacks_container">
+				<ul class="rslides" id="slider3">
+					<li>
+						<div class="banner-text">
+							<h4>Panthrandam Chal Bird Sanctuary and Bio-diversity Centre</h4>
+						</div>
+					</li>
+					<%--<li>
+						<div class="banner-text">
+							
+							<h4>Panthrandam Chal Bird Sanctuary and Bio-diversity Centre</h4>
+						</div>
+					</li>
+					<li>
+						<div class="banner-text">
+							<h4>Panthrandam Chal Bird Sanctuary and Bio-diversity Centre</h4>
+						</div>
+					</li>--%>
+				</ul>
+		</div>
+	</div>
+	<div class="scroll-button text-center"><a href="#hello" class="scroll"><img src="images/arr1.png" alt="" /></a></div>
+</div>
+<!-- //banner -->
+<!-- banner-bottom -->
+<div id="hello" class="banner-bottom">
+	<div class="container">
+		<div class="btm-header">
+			<h3 class="tittle">ABOUT</h3>
+			<p>Panthandamchal Bird Sanctuary and Bio-diversity Centre is located in Thadikadavu, Kannur. 
+<br/>          It is a tourist spot in Kannur district,Kerala.
+                It is provided with stay facilities and food services.
+                <img src="images/bird3.jpeg" alt="" style="height: 332px; width: 1054px" />
+		</div>
+		
+                
+                
+                
+                
+                <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+                
+                
+                
+                
+                
+            
+	</div>
+    	<div class="scroll-button text-center"><a href="#next" class="scroll"><img src="images/arr1.png" alt="" /></a></div>
+
+</div>
+<!-- //banner-bottom -->
+<!-- highest -->
+
+
+
+
+<div id="next" class="highest text-center">
+	<div class="container">
+		<h3>HOMESTAY FACILITIES </h3>
+		<a class="hvr-shutter-in-horizontal button" href="#nexts">ROOMS</a>
+	</div>
+</div>
+<!-- //highest -->
+<!-- collections -->
+<div id="nexts" class="collections">
+	<div class="container">
+		<div class="collection-grids cs-style-1">
+			<div class="col-md-4 collection-grid grid">
+				<figure>
+						<img src="images/room1.jpg" alt="">
+						<figcaption>
+							<a href="#next1">BOOK NOW</a>
+						</figcaption>
+				</figure>
+			</div>	
+			<div class="col-md-8 collection-grid grid">
+				<figure>
+						<img src="images/room2.jpg" alt="">
+						<figcaption>
+                            <a href="#next1">BOOK NOW</a>
+						</figcaption>
+				</figure>
+			</div>
+			<div class="col-md-4 collection-grid grid">
+				<figure>
+						<img src="images/room3.jpg" alt="">
+						<figcaption>
+                            <a href="#next1">BOOK NOW</a>
+						</figcaption>
+				</figure>
+			</div>	
+			<div class="col-md-4 collection-grid grid">
+				<figure>
+						<img src="images/room4.jpg" alt="">
+						<figcaption>
+                            <a href="#next1">BOOK NOW</a>  
+                        </figcaption>
+				</figure>
+			</div>	
+			<div class="col-md-4 collection-grid grid">
+				<figure>
+						<img src="images/room5.jpg" alt="">
+						<figcaption>
+                           <a href="#next1">BOOK NOW</a>
+                        </figcaption>
+				</figure>
+			</div>
+			<div class="col-md-8 collection-grid grid">
+				<figure>
+						<img src="images/room6.jpg" alt="">
+						<figcaption>
+                            <a href="#next1">BOOK NOW</a>   
+                        </figcaption>
+				</figure>
+			</div>
+			<div class="col-md-4 collection-grid grid">
+				<figure>
+						<img src="images/room7.jpg" alt="">
+						<figcaption>
+                           <a href="#next1">BOOK NOW</a>
+                        </figcaption>
+				</figure>
+			</div>	
+			<div class="clearfix"></div>
+		</div>
+		 <script src="js/lightbox.js"></script>
+	</div>
+</div>
+<!-- collections -->
+<!-- comfort -->
+
+
+
+<div id="next1" class="comfort">
+	<div class="container">
+		<h3 class="tittle">USER LOGIN</h3>
+		
+ <div class="login">
+  	<h2 class="login-heading">
+      Please login.</h2>
+     <p class="login-heading">
+         &nbsp;</p>
+      
+      <form method="post" runat="server">
+       <asp:TextBox ID="unametxt" runat="server"  placeholder="Username" required="required" class="input-txt"></asp:TextBox> 
+         <asp:TextBox ID="pswdtxt" runat="server" type="password" name="password" placeholder="Password" required="required" class="input-txt"></asp:TextBox> 
+          <div class="login-footer">
+      <asp:Button ID="Button1" runat="server" Text="Sign in" class="btn btn--right" OnClick="Button1_Click" /> 
+              <asp:Button ID="Button2" runat="server" Text="Cancel" class="btn btn--right" />
+          </div>
+    New User?<a href="register.aspx">Register Here</a>
+      </form></div>
+</div>
+    
+        <script src="../js/loginjs/index.js"></script>
+    	</div>
+
+<%--      <div class="scroll-button text-center"><a href="#next2" class="scroll1"><img src="../Admin/images/arr1.png" alt="" /></a></div>--%>
+
+<!-- //comfort -->
+<!-- footer -->
+
+
+
+
+
+
+    <div id="next2" class="footer">
+	<div class="container">
+		<h3 class="tittle">CONTACT US</h3>
+		<div class="footer-grids">
+			<div class="col-md-3 footer-grid">
+				<h3>KEEP IN TOUCH</h3>
+				<ul>
+					<li><a href="#">Facebook</a></li>
+					<li><a href="#">Twitter</a></li>
+					
+					
+				</ul>
+			</div>
+			<div class="col-md-3 footer-grid">
+				<h3>CONTACT INFO</h3>
+				<ul>
+					<P>Mob: 8281985538</P>
+					<P>Mob: 9946441273</P>
+					<P>Email: shilpakjoy707@gmail.com</P>
+				</ul>
+			</div>
+             <div class="col-md-3 footer-grid">
+				<h3>ADDRESS</h3>
+                    <p>Thadikkadave</p>
+                    <p>Kannur, Kerala 670581</p>
+                    <p>India</p>
+                 </div>
+			
+			<div class="col-md-3 footer-grid">
+				<h3>COPYRIGHT</h3>
+				<p> &copy; PanthrandamchalBirdSanctuary All Rights Reserved | Design  by <a href="www.panthrandamchal.com" target="target_blank">Panthrandamchal</a></p>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+</div>
+
+<!-- //footer -->
+<!-- Bootstrap core JavaScript-->
+    <!-- Placed at the end of the document so the pages load faster -->
+	<!-- js -->
+		 <script src="js/bootstrap.js"></script>
+	<!-- js -->
+<!-- smooth scrolling -->
+	<script type="text/javascript">
+	    $(document).ready(function () {
+	        /*
+                var defaults = {
+                containerID: 'toTop', // fading element id
+                containerHoverID: 'toTopHover', // fading element hover id
+                scrollSpeed: 1200,
+                easingType: 'linear' 
+                };
+            */
+	        $().UItoTop({ easingType: 'easeOutQuart' });
+	    });
+	</script>
+	<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+<!-- //smooth scrolling -->
+</body>
+
+
+
+
+
+
+
+    <%--<form id="form1" runat="server">
+    <div>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>--%>
+
+</html>
